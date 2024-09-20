@@ -2,21 +2,15 @@
 
 <main>
   <ul id="users">
-    <!-- @for(userItem of users; track userItem.id){
+    @for(userItem of users; track userItem.id){
     <li>
       <app-user
         [user]="userItem"
+        [selected]="userItem.id === selectedUserId"
         (selectedUser)="onSelectedUserComeFromOutside($event)"
       ></app-user>
     </li>
-    } -->
-
-    <li *ngFor="let userItem of users">
-        <app-user
-          [user]="userItem"
-          (selectedUser)="onSelectedUserComeFromOutside($event)"
-        ></app-user>
-      </li>
+    }
   </ul>
   
   @if(selectedUser ) {
@@ -24,9 +18,4 @@
   }@else {
     <p id="fallback">Select a user to see a task</p>
   }
-
-  <!-- <app-tasks *ngIf="selectedUser; else otherwise" [name]="selectedUser!.name"></app-tasks>
-  <ng-template #otherwise>
-    <p id="fallback">Select a user to see a task</p>
-  </ng-template> -->
 </main>

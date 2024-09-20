@@ -23,8 +23,6 @@ export class AppComponent {
   }
 
   onSelectedUserComeFromOutside(id: string) {
-    console.log('Event received:', id); // Make sure 'id' is what you expect
-    console.log(`the user with id: ${id} received`);
     this.selectedUserId = id;
   }
 }
