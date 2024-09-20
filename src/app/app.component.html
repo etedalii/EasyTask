@@ -19,14 +19,14 @@
       </li>
   </ul>
   
-  <!-- @if(selectedUser ) {
-    <app-task [name]="selectedUser.name"></app-task>
+  @if(selectedUser ) {
+    <app-tasks [name]="selectedUser.name" [userId]="selectedUser.id"></app-tasks>
   }@else {
     <p id="fallback">Select a user to see a task</p>
-  } -->
+  }
 
-  <app-tasks *ngIf="selectedUser; else otherwise" [name]="selectedUser!.name"></app-tasks>
+  <!-- <app-tasks *ngIf="selectedUser; else otherwise" [name]="selectedUser!.name"></app-tasks>
   <ng-template #otherwise>
     <p id="fallback">Select a user to see a task</p>
-  </ng-template>
+  </ng-template> -->
 </main>
